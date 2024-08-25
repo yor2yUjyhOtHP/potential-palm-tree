@@ -40,7 +40,7 @@ async function main() {
   console.log(`Mint Response: https://explorer-evm.testnet.swisstronik.com/tx/${safeMint.hash}`);
 
   // Write the transaction hash to contracterc721tx.txt
-  fs.writeFileSync(transactionFilePath, safeMint.hash);
+  fs.writeFileSync(transactionFilePath, `https://explorer-evm.testnet.swisstronik.com/tx/${safeMint.hash}`);
   console.log('Transaction hash saved to contracterc721tx.txt in "Task contract" folder');
 }
 
