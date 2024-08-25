@@ -57,7 +57,7 @@ async function main() {
   );
 
   // Write the transaction hash to txerc20.txt
-  fs.writeFileSync(txFilePath, transfer.hash);
+  fs.writeFileSync(txFilePath, `https://explorer-evm.testnet.swisstronik.com/tx/${transfer.hash}`);
   console.log(`Transaction hash written to ${txFilePath}`);
 }
 
