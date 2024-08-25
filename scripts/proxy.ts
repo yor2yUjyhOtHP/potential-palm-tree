@@ -72,7 +72,7 @@ async function main() {
   );
 
   // Write the upgrade transaction hash to contractproxytx.txt
-  fs.writeFileSync(upgradeTxFilePath, upgrade.hash);
+  fs.writeFileSync(upgradeTxFilePath, `https://explorer-evm.testnet.swisstronik.com/tx/${upgrade.hash}`);
   console.log(`Upgrade transaction hash written to ${upgradeTxFilePath}`);
 }
 
