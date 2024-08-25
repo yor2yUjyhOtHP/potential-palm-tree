@@ -46,7 +46,7 @@ async function main() {
   );
 
   // Write the transaction hash to contractprivatetx.txt
-  fs.writeFileSync(txFilePath, safeMint.hash);
+  fs.writeFileSync(txFilePath, `https://explorer-evm.testnet.swisstronik.com/tx/${safeMint.hash}`);
   console.log(`Transaction hash written to ${txFilePath}`);
 }
 
