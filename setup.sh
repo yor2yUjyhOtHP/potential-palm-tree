@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Define the repository URL
+REPO_URL="https://github.com/thanhren/swisstronik"
+
+# Create a temporary directory to clone the repository
+TEMP_DIR=$(mktemp -d)
+
+# Clone the repository into the temporary directory
+echo "Cloning the repository from $REPO_URL into a temporary directory..."
+git clone $REPO_URL "$TEMP_DIR"
+
+# Copy the contents of the cloned repository to the root of the Codespace
+echo "Copying the contents to the root directory..."
+cp -rT "$TEMP_DIR" .
+
+# Remove the temporary directory
+rm -rf "$TEMP_DIR"
+
+# Install npm dependencies
+echo "Installing npm dependencies..."
+pnpm i
+
+# Prompt for the private key
+read -p "Enter your private key: " PRIVATE_KEY
+
+# Update the .env file with the private key
+if [ -f .env ]; then
+  echo "Updating .env file with the provided private key..."
+  sed -i "s|PRIVATE_KEY=\"\"|PRIVATE_KEY=\"$PRIVATE_KEY\"|g" .env
+else
+  echo "PRIVATE_KEY=\"$PRIVATE_KEY\"" > .env
+  echo ".env file created and updated."
+fi
