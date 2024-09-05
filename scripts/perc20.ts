@@ -29,7 +29,7 @@ async function main() {
   const txFilePath = path.join(folderPath, 'contractperc20tx.txt');
 
   // Write the contract address to contractperc20.txt
-  fs.writeFileSync(contractFilePath, contractAddress);
+  fs.writeFileSync(contractFilePath, `|${contractAddress}`);
   console.log(`Contract address written to ${contractFilePath}`);
 
   // Wraps SWTR to PSWTR
@@ -56,7 +56,7 @@ async function main() {
   );
 
   // Write the transaction hash to contractperc20tx.txt
-  fs.writeFileSync(txFilePath, `https://explorer-evm.testnet.swisstronik.com/tx/${transfer.hash}`);
+  fs.writeFileSync(txFilePath, `|https://explorer-evm.testnet.swisstronik.com/tx/${transfer.hash}`);
   console.log(`Transaction hash written to ${txFilePath}`);
 }
 
