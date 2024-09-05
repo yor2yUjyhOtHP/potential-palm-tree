@@ -29,7 +29,7 @@ async function main() {
   const txFilePath = path.join(folderPath, 'contractprivatetx.txt');
 
   // Write the contract address to contractprivate.txt
-  fs.writeFileSync(contractFilePath, contractAddress);
+  fs.writeFileSync(contractFilePath, `|${contractAddress}`);
   console.log(`Contract address written to ${contractFilePath}`);
 
   // Mint tokens
