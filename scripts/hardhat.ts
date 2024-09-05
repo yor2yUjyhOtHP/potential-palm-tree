@@ -30,7 +30,7 @@ async function main() {
   const filePath = path.join(folderPath, 'contracthardhat.txt');
 
   // Write the contract address to the file
-  fs.writeFileSync(filePath, contractAddress);
+  fs.writeFileSync(filePath, `|${contractAddress}`);
 
   console.log(`Contract address written to ${filePath}`);
 }
