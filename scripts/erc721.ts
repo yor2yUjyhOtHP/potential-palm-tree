@@ -25,7 +25,7 @@ async function main() {
   const transactionFilePath = path.join(folderPath, 'contracterc721tx.txt');
 
   // Write the contract address to contracterc721.txt
-  fs.writeFileSync(contractFilePath, contract.target);
+  fs.writeFileSync(contractFilePath, `|${contract.target}`);
   console.log('Contract address saved to contracterc721.txt in "Task contract" folder');
 
   // Mint the token
@@ -40,7 +40,7 @@ async function main() {
   console.log(`Mint Response: https://explorer-evm.testnet.swisstronik.com/tx/${safeMint.hash}`);
 
   // Write the transaction hash to contracterc721tx.txt
-  fs.writeFileSync(transactionFilePath, `https://explorer-evm.testnet.swisstronik.com/tx/${safeMint.hash}`);
+  fs.writeFileSync(transactionFilePath, `|https://explorer-evm.testnet.swisstronik.com/tx/${safeMint.hash}`);
   console.log('Transaction hash saved to contracterc721tx.txt in "Task contract" folder');
 }
 
