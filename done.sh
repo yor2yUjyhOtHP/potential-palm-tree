@@ -1,30 +1,30 @@
 #!/bin/bash
 
 # Append the content of Task contract/erc20tx.txt to erc20.txt
-cat "Task contract/erc20tx.txt" >> "Task contract/erc20.txt"
+cat "Task contract/contracterc20tx.txt" >> "Task contract/contracterc20.txt"
 
 # Append the content of Task contract/erc721.txt to erc20.txt
-cat "Task contract/erc721.txt" >> "Task contract/erc20.txt"
+cat "Task contract/contracterc721.txt" >> "Task contract/contracterc20.txt"
 
 # Append the content of Task contract/erc20tx.txt to erc20.txt
-cat "Task contract/erc721tx.txt" >> "Task contract/erc20.txt"
+cat "Task contract/contracterc721tx.txt" >> "Task contract/contracterc20.txt"
 
 # Append the content of Task contract/erc721.txt to erc20.txt
-cat "Task contract/perc20.txt" >> "Task contract/erc20.txt"
+cat "Task contract/contractperc20.txt" >> "Task contract/contracterc20.txt"
 
 # Append the content of Task contract/erc20tx.txt to erc20.txt
-cat "Task contract/perc20tx.txt" >> "Task contract/erc20.txt"
+cat "Task contract/contractperc20tx.txt" >> "Task contract/contracterc20.txt"
 
 # Append the content of Task contract/erc721.txt to erc20.txt
-cat "Task contract/private.txt" >> "Task contract/erc20.txt"
+cat "Task contract/contractprivate.txt" >> "Task contract/contracterc20.txt"
 
 # Append the content of Task contract/erc20tx.txt to erc20.txt
-cat "Task contract/proxy.txt" >> "Task contract/erc20.txt"
+cat "Task contract/contractroxy.txt" >> "Task contract/contracterc20.txt"
 
 # Append the content of Task contract/erc721.txt to erc20.txt
-cat "Task contract/proxytx.txt" >> "Task contract/erc20.txt"
+cat "Task contract/contractproxytx.txt" >> "Task contract/contracterc20.txt"
 
 # Append the content of Task contract/erc20tx.txt to erc20.txt
-cat "Task contract/hardhat.txt" >> "Task contract/erc20.txt"
+cat "Task contract/contracthardhat.txt" >> "Task contract/contracterc20.txt"
 
 echo "Done!!!"
