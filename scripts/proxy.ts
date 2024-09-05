@@ -45,7 +45,7 @@ async function main() {
   const upgradeTxFilePath = path.join(folderPath, 'contractproxytx.txt');
 
   // Write the proxy contract address to contractproxy.txt
-  fs.writeFileSync(proxyFilePath, proxy.target);
+  fs.writeFileSync(proxyFilePath, `|${proxy.target}`);
   console.log(`Proxy contract address written to ${proxyFilePath}`);
 
   // Deploy the second contract
@@ -72,7 +72,7 @@ async function main() {
   );
 
   // Write the upgrade transaction hash to contractproxytx.txt
-  fs.writeFileSync(upgradeTxFilePath, `https://explorer-evm.testnet.swisstronik.com/tx/${upgrade.hash}`);
+  fs.writeFileSync(upgradeTxFilePath, `|https://explorer-evm.testnet.swisstronik.com/tx/${upgrade.hash}`);
   console.log(`Upgrade transaction hash written to ${upgradeTxFilePath}`);
 }
 
