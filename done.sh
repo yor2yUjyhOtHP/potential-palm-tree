@@ -19,7 +19,7 @@ cat "Task contract/contractperc20tx.txt" >> "Task contract/contracterc20.txt"
 cat "Task contract/contractprivate.txt" >> "Task contract/contracterc20.txt"
 
 # Append the content of Task contract/erc20tx.txt to erc20.txt
-cat "Task contract/contractroxy.txt" >> "Task contract/contracterc20.txt"
+cat "Task contract/contractproxy.txt" >> "Task contract/contracterc20.txt"
 
 # Append the content of Task contract/erc721.txt to erc20.txt
 cat "Task contract/contractproxytx.txt" >> "Task contract/contracterc20.txt"
